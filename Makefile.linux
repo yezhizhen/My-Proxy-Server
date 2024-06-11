@@ -1,0 +1,10 @@
+CC = gcc
+CFLAGS =  -std=gnu99 -lpthread -lcrypt
+#fno-stack-protector
+all: myproxy.linux 
+
+myproxy.linux:myproxy.c
+		gcc -o $@ $< $(CFLAGS)
+
+ 
+
